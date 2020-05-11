@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio4">
+  <ClassDiagramComponents>
+    <Class name="Programa" package="ejercicio4" visibility="public" xPosition="10.0" yPosition="3.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="513.0" yPosition="122.0">
+      <Fields>
+        <Field name="nombrePersona" type="String" visibility="protected"/>
+        <Field name="emailPersona" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Comercial" package="" visibility="public" xPosition="351.0" yPosition="298.0">
+      <Fields>
+        <Field name="cargoComercial" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Usuario" package="" visibility="public" xPosition="688.0" yPosition="298.0">
+      <Fields>
+        <Field name="telefonoUsuario" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Articulo" package="" visibility="public" xPosition="917.0" yPosition="122.0">
+      <Fields>
+        <Field name="nombreArticulo" type="String" visibility="private"/>
+        <Field name="cantidadArticulo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Empresa" package="" visibility="public" xPosition="688.0" yPosition="513.0">
+      <Fields>
+        <Field name="cifEmpresa" type="String" visibility="private"/>
+        <Field name="nombreEmpresa" type="String" visibility="private"/>
+        <Field name="telefonoEmpresa" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Cliente" package="" visibility="public" xPosition="176.0" yPosition="536.0">
+      <Methods>
+        <Method name="compra" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="has" source="Persona" target="Articulo" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Empresa" target="Cliente"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Usuario" target="Cliente"/>
+    <IsRelation name="is" source="Comercial" target="Persona"/>
+    <IsRelation name="is" source="Usuario" target="Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
