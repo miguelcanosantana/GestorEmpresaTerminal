@@ -3,8 +3,8 @@ package ejercicio4;
 public class Persona {
 
   //Variables
-  protected String nombrePersona;
-  protected String emailPersona;
+  private String nombrePersona;
+  private String emailPersona;
 
   //_Constructor
   public Persona(String nombrePersona, String emailPersona) {

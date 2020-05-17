@@ -1,15 +1,24 @@
 package ejercicio4;
-import java.util.ArrayList;
 
-public class Usuario extends Persona implements Cliente {
+public class Usuario extends Persona implements Cliente{
 
   //_Variables
   private String telefonoUsuario;
-  ArrayList<Articulo> listaObjetosComprados = new ArrayList();
   
   //_Constructor
   public Usuario(String nombrePersona, String emailPersona, String telefonoUsuario) {
     super(nombrePersona, emailPersona);
+    this.telefonoUsuario = telefonoUsuario;
+  }
+  
+  //_Getters y Setters
+
+  public String getTelefonoUsuario() {
+    return telefonoUsuario;
+  }
+
+  public void setTelefonoUsuario(String telefonoUsuario) {
+    this.telefonoUsuario = telefonoUsuario;
   }
   
 
@@ -17,31 +26,23 @@ public class Usuario extends Persona implements Cliente {
   @Override
   public void compra(Comercial comercial, Articulo articulo) {
     comercial.listaVentaObjetos.add(articulo);
-    listaObjetosComprados.add(articulo); 
   }
-
-  //_Getters y Setters
-  public String getNombrePersona() {
-    return nombrePersona;
-  }
-
-  public void setNombrePersona(String nombrePersona) {
-    this.nombrePersona = nombrePersona;
-  }
-
-  public String getEmailPersona() {
-    return emailPersona;
-  }
-
-  public void setEmailPersona(String emailPersona) {
-    this.emailPersona = emailPersona;
-  }
+  
   
   //toString
   @Override
   public String toString() {
-    return  telefonoUsuario + ", listaObjetosComprados=" + listaObjetosComprados + '}';
+    //return  telefonoUsuario + ", listaObjetosComprados=" + listaObjetosComprados + '}';
+    return this.getNombrePersona() + " | " + this.getEmailPersona()+ " | " + this.getTelefonoUsuario();
   }
+  
+  //_Compara emails usuario (se hace casting de objeto a usuario)
+  @Override
+  public boolean equals(Object u) {
+    return this.getEmailPersona().equals(((Usuario)u).getEmailPersona());
+  }
+  
+  
   
   
 }

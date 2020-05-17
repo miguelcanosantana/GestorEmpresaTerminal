@@ -33,7 +33,7 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Articulo" package="" visibility="public" xPosition="917.0" yPosition="122.0">
+    <Class name="Articulo" package="" visibility="public" xPosition="988.0" yPosition="122.0">
       <Fields>
         <Field name="nombreArticulo" type="String" visibility="private"/>
         <Field name="cantidadArticulo" type="int" visibility="private"/>
@@ -58,9 +58,9 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <HasRelation name="has" source="Persona" target="Articulo" type="Default" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Empresa" target="Cliente"/>
     <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Usuario" target="Cliente"/>
-    <IsRelation name="is" source="Comercial" target="Persona"/>
     <IsRelation name="is" source="Usuario" target="Persona"/>
+    <IsRelation name="is" source="Comercial" target="Persona"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Empresa" target="Cliente"/>
   </ClassDiagramRelations>
 </ClassDiagram>

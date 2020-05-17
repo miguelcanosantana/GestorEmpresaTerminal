@@ -33,7 +33,7 @@ public class Articulo {
   //_Override (para imprimir)
   @Override
   public String toString() {
-    return "\nNombre del Artículo: " + nombreArticulo + " | Cantidad del artículo " + cantidadArticulo;
+    return "Artículo: " + nombreArticulo + " | Cantidad: " + cantidadArticulo;
   }
   
   
