@@ -25,7 +25,8 @@ public class Usuario extends Persona implements Cliente{
   //_Override de la función compra() en la interfaz Cliente
   @Override
   public void compra(Comercial comercial, Articulo articulo) {
-    comercial.listaVentaObjetos.add(articulo);
+    comercial.vendeArticulo(articulo);
+    //comercial.listaVentaObjetos.add(articulo);
   }
   
   
@@ -41,8 +42,6 @@ public class Usuario extends Persona implements Cliente{
   public boolean equals(Object u) {
     return this.getEmailPersona().equals(((Usuario)u).getEmailPersona());
   }
-  
-  
   
   
 }

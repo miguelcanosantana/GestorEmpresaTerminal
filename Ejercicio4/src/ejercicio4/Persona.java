@@ -1,6 +1,6 @@
 package ejercicio4;
 
-public class Persona {
+abstract public class Persona {
 
   //Variables
   private String nombrePersona;

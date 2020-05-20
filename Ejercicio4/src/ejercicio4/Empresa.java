@@ -45,7 +45,7 @@ public class Empresa implements Cliente {
   //_Override de la interfaz Cliente
   @Override
   public void compra(Comercial comercial, Articulo articulo) {
-    comercial.listaVentaObjetos.add(articulo);
+    comercial.vendeArticulo(articulo);
   }
 
   //_tostring

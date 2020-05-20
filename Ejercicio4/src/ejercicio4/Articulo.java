@@ -37,7 +37,11 @@ public class Articulo {
   }
   
   
-  
+  //_Compara artículos (se hace casting de objeto a artículo)
+  @Override
+  public boolean equals(Object a) {
+    return this.nombreArticulo.equals(((Articulo)a).getNombreArticulo());
+  }
   
   
   
